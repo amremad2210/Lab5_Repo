@@ -1,5 +1,10 @@
 name: Hello Agile
-on: [push]
+on:
+  push:
+    branches: [dev] #trigger on push to dev branch
+  pull_request:
+    branches: [main] #trigger on pull request to dev branch
+    
 jobs:
   say_hello:
     runs-on: ubuntu-latest
